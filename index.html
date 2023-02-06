@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drag and Drop</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <!-- <div class="offsetY"  onclick="myFunction(event)">thanh</div> -->
+  <div class="app">
+    <div class="task task--progress">
+      <div class="task__header">
+        <h2>In Progress</h2>
+        <img class="icon-dot" src="./assets/img/more_horiz.svg" alt="">
+      </div>
+      <div class="task__body">
+        <ul class="task__list">
+          <li class="task__item">
+            <div class="card" draggable="true">
+              <div class="card__status card__status--progress">
+                <h3>InProgress</h3>
+                <img class="icon-dot" src="./assets/img/more_horiz.svg" alt="">
+              </div>
+              <div class="card__name">User onboarding 1</div>
+              <span class="card__mission">Bug Fix</span>
+              <div class="card__user-list">
+                <img src="./assets/img/328708047_3579976502234274_4651640617840964995_n.jpeg" alt="">
+              </div>
+            </div>
+          </li>
+          <li class="task__item">
+            <div class="card">
+              <div class="card__status card__status--progress">
+                <h3>InProgress</h3>
+                <img class="icon-dot" src="./assets/img/more_horiz.svg" alt="">
+              </div>
+              <div class="card__name">User onboarding 2</div>
+              <span class="card__mission">Bug Fix</span>
+              <div class="card__user-list">
+                <img src="./assets/img/328708047_3579976502234274_4651640617840964995_n.jpeg" alt="">
+              </div>
+            </div>
+          </li>
+          <li class="task__item">
+            <div class="card">
+              <div class="card__status card__status--progress">
+                <h3>InProgress</h3>
+                <img class="icon-dot" src="./assets/img/more_horiz.svg" alt="">
+              </div>
+              <div class="card__name">User onboarding 3</div>
+              <span class="card__mission">Bug Fix</span>
+              <div class="card__user-list">
+                <img src="./assets/img/328708047_3579976502234274_4651640617840964995_n.jpeg" alt="">
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="task task--completed">
+      <div class="task__header">
+        <h2>Done</h2>
+        <img class="icon-dot" src="./assets/img/more_horiz.svg" alt="">
+      </div>
+      <div class="task__body">
+        <ul class="task__list">
+          <li class="task__item">
+            <div class="card">
+              <div class="card__status card__status--completed">
+                <h3>Done</h3>
+                <img class="icon-dot" src="./assets/img/more_horiz.svg" alt="">
+              </div>
+              <div class="card__name">User onboarding 1</div>
+              <span class="card__mission">Bug Fix</span>
+              <div class="card__user-list">
+                <img src="./assets/img/328708047_3579976502234274_4651640617840964995_n.jpeg" alt="">
+                <img src="./assets/img/328708047_3579976502234274_4651640617840964995_n.jpeg" alt="">
+              </div>
+            </div>
+          </li>
+
+          <li class="task__item">
+            <div class="card">
+              <div class="card__status card__status--completed">
+                <h3>Done</h3>
+                <img class="icon-dot" src="./assets/img/more_horiz.svg" alt="">
+              </div>
+              <div class="card__name">User onboarding 2</div>
+              <span class="card__mission">Bug Fix</span>
+              <div class="card__user-list">
+                <img src="./assets/img/328708047_3579976502234274_4651640617840964995_n.jpeg" alt="">
+                <img src="./assets/img/328708047_3579976502234274_4651640617840964995_n.jpeg" alt="">
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="./dragdrop.js"></script>
+</body>
+</html>

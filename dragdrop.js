@@ -44,6 +44,7 @@ class app {
   }
 
   dragStart(e, task) {
+    // e.target.style.cursor = "move";
     task.classList.add('dragging');
     // console.log('dragStart');
   }

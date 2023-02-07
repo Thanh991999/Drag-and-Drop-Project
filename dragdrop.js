@@ -45,6 +45,7 @@ class app {
 
   dragStart(e, task) {
     // e.target.style.cursor = "move";
+    // console.log(e.target.closest('.card').style.backgroundColor = 'red');
     task.classList.add('dragging');
     // console.log('dragStart');
   }
@@ -53,7 +54,6 @@ class app {
     this.changeStyleStatus(task);
     task.classList.remove('dragging');
     this.checkTaskListEmpty();
-
     // console.log('dragEnd');
   }
 

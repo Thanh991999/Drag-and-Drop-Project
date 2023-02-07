@@ -7,6 +7,10 @@
   line-height: 14px;
 }
 
+body {
+  background: linear-gradient(14deg, rgb(98 241 255 / 62%) 11%, rgb(151 240 199) 41%);
+}
+
 .app {
   max-width: 1020px;
   width: 100%;
@@ -15,6 +19,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 20px;
   padding: 100px 20px;
+  height: 100vh;
 }
 
 .task {

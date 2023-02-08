@@ -2,8 +2,6 @@ class app {
   constructor() {
     this.taskCards            = document.querySelectorAll('.task .task__item');
     this.taskStatusList       = document.querySelectorAll('.task .task__list');
-    this.taskProgressItems    = document.querySelectorAll('.task .task__item');
-    this.taskCompletedItems   = document.querySelectorAll('.task--completed .task__item');
     this.cardlist             = document.querySelectorAll('.card');
 
     this.addIndexItems();
@@ -13,7 +11,7 @@ class app {
   handleEvents() {
 
     this.taskCards.forEach((task) => {
-
+      // kich hoat tren the co thuoc tinh draggable
       task.ondragstart = (e) => {
         this.dragStart(e, task);
       }
@@ -24,15 +22,11 @@ class app {
     })
 
     this.taskStatusList.forEach((taskStatus) => {
+      // kich hoat khi the duoc tha vao
       taskStatus.ondragover = (e) => {
         this.dragOver(e, taskStatus);
       }
-      taskStatus.ondragenter = (e) => {
-        this.dragEnter();
-      }
-      taskStatus.ondragleave = (e) => {
-        this.dragLeave();
-      }
+
       taskStatus.ondrop = (e) => {
         this.drop(e, taskStatus);
       }
@@ -70,16 +64,8 @@ class app {
     // console.log('dragOver');
   }
 
-  dragEnter() {
-    // console.log('dragEter');
-  }
-
-  dragLeave() {
-    // console.log('dragLeave');
-  }
-
   drop(e, taskStatus) {
-    e.preventDefault();
+    // e.preventDefault();
     console.log(taskStatus.querySelector('.card__status'));
   }
 
@@ -109,6 +95,7 @@ class app {
 
   getDragAfterElement(taskStatus, y) {
     const draggableElements = [...taskStatus.querySelectorAll('.task__item:not(.dragging)')];
+    console.log(draggableElements);
     return draggableElements.reduce((closest, child) => {
       const box = child.getBoundingClientRect();
       const offset = y - box.top - box.height / 2;
@@ -124,7 +111,7 @@ class app {
   }
 
   addIndexItems() {
-    this.taskProgressItems.forEach((item, index) => {
+    this.taskCards.forEach((item, index) => {
       item.setAttribute('data-index', index);
     });
   }

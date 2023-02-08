@@ -9,7 +9,6 @@ class app {
   }
 
   handleEvents() {
-
     this.taskCards.forEach((task) => {
       // kich hoat tren the co thuoc tinh draggable
       task.ondragstart = (e) => {
@@ -95,10 +94,10 @@ class app {
 
   getDragAfterElement(taskStatus, y) {
     const draggableElements = [...taskStatus.querySelectorAll('.task__item:not(.dragging)')];
-    console.log(draggableElements);
     return draggableElements.reduce((closest, child) => {
       const box = child.getBoundingClientRect();
       const offset = y - box.top - box.height / 2;
+      // console.log(offset)
       if (offset < 0 && offset > closest.offset){
         return {
           offset: offset, element: child
@@ -122,3 +121,11 @@ const appObj = new app();
 // function myFunction(e) {
 //   console.log(e.offsetY);
 //  }
+
+
+
+const $ = document.querySelector.bind(document);
+
+const a = $('body');
+
+console.log(a);
